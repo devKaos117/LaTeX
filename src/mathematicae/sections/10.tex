@@ -1,0 +1,65 @@
+%------- 10.1
+\subsection{Combinatória}
+    %--- 10.1.1
+    \subsubsection{Princípio Fundamental da Contagem}
+        \begin{description}
+            \item[Teoremas Auxiliares:]
+                Considerando dois conjuntos quaisquer, o número de possíveis pares ordenados formados por elementos dos 2 conjuntos é determinado pelo produto do número de elementos dos conjuntos:
+                \[ (\{a_1, \cdots, a_m\}), (\{b_1, \cdots, b_n\}) \]
+                \[ \#\{ (a_i,b_j) \ | \ i \in \mathbb{N}^m, j \in \mathbb{N}^n \} = m \cdot n \]
+
+                O número de possíveis pares ordenados formados por elementos de um mesmo conjunto é determinado pelo número de elementos do conjunto:
+                \[ \#\{ (a_i,a_j) \ | \ (i \neq j \leftrightarrow a_i \neq a_j) \ \forall i,j \in \mathbb{N}^m \} = m \cdot (m-1) \]
+            \item[Princípio:]
+                Considerando um conjunto qualquer, o número de ênuplas ordenadas de um mesmo tamanho formadas por elementos distintos é definida pelo seu número de elementos e o número de elementos do conjunto:
+                \[ (\{a_1, \cdots, a_n\}), (Z = \{ (a_i, \cdots)_P \ | \ (i \neq j \leftrightarrow a_i \neq a_j) \ \forall i,j \in \mathbb{N}^n \}) \]
+                \[ \#Z = \displaystyle\prod_{k=0}^{p-1} {n - k} = n \cdot (n-1) \cdots (n - (p - 1)) \]
+        \end{description}
+    %--- 10.1.2
+    \subsubsection{Arranjo}
+        \begin{description}
+            \item[Arranjo Simples:]
+                É toda enupla de elementos distintos de um conjunto, onde o número de enuplas possíveis é determinado por:
+                \[ (\{ a_1, \cdots, a_n \}), (A_{n,p} = \{ (a_i, \cdots)_p \ | \ (i \neq j \leftrightarrow a_i \neq a_j) \ \forall i,j \in \mathbb{N}^n \}) \]
+                \[ \#A_{n,p} = \frac{n!}{(n-p)!} \]
+            \item[Arranjo com Repetição:]
+                É toda enupla de elementos não necessariamente distintos de um conjunto, onde o número de enuplas possíveis é determinado por:
+                \[ (\{ a_1, \cdots, a_n \}), (A_{n,p}^R = \{ (a_i, \cdots)_p\}) \]
+                \[ \#A_{n,p}^R = n^p \]
+        \end{description}
+    %--- 10.1.3
+    \subsubsection{Permutação}
+        \begin{description}
+            \item[Permutação Simples:]
+                É um arranjo simples onde o número de elementos escolhidos é o número de elementos do conjunto, e o número de permutações possíveis é determinado por:
+                \[ (\{ a_1, \cdots, a_n \}), (P_n = A_{n,n} \{ (a_i, \cdots)_n \ | \ (i \neq j \leftrightarrow a_i \neq a_j) \ \forall i,j \in \mathbb{N}^n \}) \]
+                \[ \#P_n = n! \]
+            \item[Permutação com Repetição:]
+                Quando existem elementos repetidos no conjunto a ser permutado, o número de permutações possíveis é determinado por:
+                \[ (\{ a_1, \cdots, a_n \}), (n_i = \#\{ a_j \ | \ a_j = a_i \}) \]
+                \[ \#P_{n}^{n_i} = \frac{n!}{\displaystyle\prod_{i=1}^{n} {n_i !}} \]
+        \end{description}
+    %--- 10.1.4
+    \subsubsection{Combinação}
+        \begin{description}
+            \item[Combinação Simples:]
+            É todo subconjunto de tamanho determinado com elementos distintos, onde o número de combinações possíveis é determinado por:
+            \[ (A = \{ a_1, \cdots, a_n \}), (C_{n, p} = \{ \cdots ,a_p\} \ | \ C \in A \wedge (i \neq j \leftrightarrow a_i \neq a_j) \ \forall a_i, a_j \in C) \]
+            \[ \#C_{n, p} = \binom{n}{p} = \frac{n!}{p! \cdot (n-p)!} \]
+            \item[Combinação com Repetição:]
+            É todo subconjunto de tamanho determinado com elementos não necessariamente distintos, onde o número de combinações possíveis é determinado por:
+            \[ (A = \{ a_1, \cdots, a_n \}), (C_{n, p} = \{ \cdots ,a_p\} \ | \ C \in A \]
+            \[ \#C_{n, p} = \binom{n + p -1}{p} = \frac{(n + p - 1)!}{p! \cdot (n - 1)!} \]
+        \end{description}
+%------- 10.2
+\subsection{Probabilidade}
+    \[ \Upsilon \pi o \mu o \nu \eta \]
+%------- 10.3
+\subsection{Teoria dos Grafos}
+    \[ \Upsilon \pi o \mu o \nu \eta \]
+%------- 10.4
+\subsection{Otimização}
+    \[ \Upsilon \pi o \mu o \nu \eta \]
+%------- 10.5
+\subsection{Criptografia}
+    \[ \Upsilon \pi o \mu o \nu \eta \]

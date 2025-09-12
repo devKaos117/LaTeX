@@ -1,0 +1,113 @@
+%------- 11.1
+\subsection{Matemática Financeira}
+    %--- 11.1.1
+    \subsubsection{Introdução}
+        Ao lidar com expressões monetárias, o valor a ser tratado é chamado de capital; A correção do capital para o caso de investimento ou empréstimo é chamado juros; A correção do capital expressa em porcentagem sobre determinado período de tempo é chamada taxa de juros; O valor do capital em determinado tempo após aplicados os juros é chamado montante:
+        \[ J = C \cdot i \]
+        \[ M = C + J \]
+    %--- 11.1.2
+    \subsubsection{Variação Percentual}
+        Para o caso de uma mudança sobre uma determinada grandeza em um espaço de tempo, a variação percentual é a razão entre a diferença e o valor inicial expressa em porcentagem:
+        \[ \Delta V = \frac{V_t - V_0}{V_0} = \frac{V_t}{V_0} - 1 \]
+        Quando consideradas mudanças sucessivas em determinados espaços de tempo, o cálculo da variação percentual acumulada é feito da seguinte forma:
+        \[ \Delta V_n = \frac{V_n - V_{n-1}}{V_{n-1}} \]
+        \[ V_n = V_0 \displaystyle\prod_{i=0}^{n} {1 + \Delta V_i} \]
+    %--- 11.1.3
+    \subsubsection{Inflação e Deflação}
+        A inflação e a deflação são sentidos opostos do movimento sobre o valor real de uma moeda em relação a determinado padrão, sendo respectivamente a desvalorização e a valorização da moeda.
+    %--- 11.1.4
+    \subsubsection{Regimes de Capitalização}
+        \begin{description}
+            \item[Capitalização Simples:]
+                No regime de capitalização simples, os juros incidem sobre as parcelas com sua taxa aplicada sobre o capital inicial:
+                \[ J = C \cdot i \cdot t \]
+            \item[Capitalização Composta:]
+                No regime de capitalização composta, os juros incidem sobre as parcelas com sua taxa aplicada sobre o montante de cada parcela:
+                \[ M_t = C \cdot \displaystyle\prod_{n=1}^{t} {1 + i_n} = C \cdot (1 + i_1) \cdots (1 + i_t) \]
+                Considerando que a taxa de juros se mantenha inalterada com o passar do tempo:
+                \[ M_t = C \cdot (1+i)^t \]
+                Quando necessário calcular o valor atual a partir do valor futuro, basta inverter os juros de volta:
+                \[ C = \frac{M_t}{(1+i)^t} \]
+        \end{description}
+    %--- 11.1.5
+    \subsubsection{Sequência Uniforme de Pagamentos}
+        Dado um valor financiado em parcelas iguais sob um regime de capitalização composta com taxa de juros fixa, a sequência das parcelas forma uma progressão geométrica. O valor atual do financiamento é dado pela soma dos valores atuais das parcelas:
+        \[ C = \displaystyle\sum_{n=1}^{t} {\frac{V_p}{(1+i)^n}} = V_p \cdot \frac{(1+i)^t - 1}{(1+i)^t \cdot i} \]
+    %--- 11.1.6
+    \subsubsection{Sequência Uniforme de Depósitos}
+        Considerando uma sequência de depósitos iguais sob um regime de capitalização composta com taxa de juros fixa, a sequência dos depósitos forma uma progressão geométrica. O montante depositado em dado momento é dado pela soma dos valores atuais dos depósitos:
+        \[ C = \displaystyle\sum_{n=1}^{t-1} {V_d \cdot (1+i)^n} = V_d \cdot \frac{(1+i)^t -1}{i} \]
+%------- 11.2
+\subsection{Estatística}
+    %--- 11.2.1
+    \subsubsection{Introdução}
+        Estatística é a aplicação da probabilística para explicar a frequência de eventos em situações observacionais e modelar a incerteza para prever eventos futuros. Divide-se em:
+        \begin{description}
+            \item[Amostragem:] a população é o conjunto de objetos que interessam ao estudo e uma amostra é um subconjunto da população formado por um procedimento definido, os elementos desse subconjunto são os pontos amostrais;
+            \item[Estatística Descritiva:] é a técnica de organização e descrição dos dados coletados do espaço amostral;
+            \item[Estatística Inferencial:] é a realização de inferências ou modelagens a partir dos dados do espaço amostral.
+        \end{description}
+    %--- 11.2.2
+    \subsubsection{Variáveis}
+        São características dos elementos do espaço amostral que adquirem determinado valor, sendo classificadas em:
+        \begin{description}
+            \item[Qualitativas:] são atributos ou aspectos nominais, não podendo ser numericamente mensurados. e.g.: gênero, estado civil, religião;
+            \item[Quantitativas:] são valores numericamente mensuráveis, divididas em:
+                \begin{description}
+                    \item[discretas - ] são obtidas por contagem e representadas como elementos de um conjunto finito e mensurável. \eg \ frequência semanal;
+                    \item[contínuas - ] são obtidas por mensuração, se expressando por valores pertencentes a um intervalo real. \eg \ idade, renda familiar;
+                \end{description}
+        \end{description}
+    %--- 11.2.3
+    \subsubsection{Frequência}
+        Para cada variável estudada, conta-se o número de ocorrências total de cada valor para se obter a frequência absoluta, e ao dividir o número de ocorrências de um determinado valor pela frequência absoluta, obtém-se a frequência relativa daquela ocorrência. \eg
+        \[ x_1 = 16, x_2 = 14, x_3 = 9 \]
+        \[ f_x = 39, f_{x_1} = \frac{16}{39} \]
+    %--- 11.2.4
+    \subsubsection{Medidas de Centralidade}
+        \begin{description}
+            \item[Média Aritmética Simples:]
+                Definida pelo somatório dos valores assumidos pela variável dividido pelo número de valores:
+                \[ \overline{x} = \displaystyle\sum_{i=1}^{n} {x_i \cdot n^{-1}} = \frac{x_1 + \cdots + x_n}{n} \]
+            \item[Média Aritmética Ponderada:]
+                Definida pelo somatório dos produtos dos valores assumidos pela varíavel por seus respectivos pesos (comunmente sua frequência relativa) divido pelo somatório dos pesos:
+                \[ \overline{x} = \frac{\displaystyle\sum_{i=1}^{n} {x_i \cdot p_i}}{\displaystyle\sum_{i=1}^{n} {p_i}} = \frac{x_1 \cdot p_1 \cdots x_n \cdot p_n}{p_1 + \cdot + p_n} \]
+            \item[Média Geométrica:]
+                Definida pela raiz do produto dos valores assumidos pela variável:
+                \[ G_x = \left(\displaystyle\prod_{i=1}^{n} {x_n}\right)^{\frac{1}{n}} = \sqrt[n]{x_1 \cdots x_n} \]
+            \item[Média Harmônica:]
+                Definida pelo inverso da média aritmética dos inversos dos valores assumidos pela variável:
+                \[ H_x = \left(\displaystyle\sum_{i=1}^{n} {\frac{x_{i}^{-1}}{n}}\right)^{-1} = \left(\frac{x_1^{-1} + \cdots + x_n^{-1}}{n}\right)^{-1} \]
+            \item[Mediana:]
+                É o valor que separa as metades maior e menor dos valores assumidos por uma variável quando em ordem crescente, sendo o termo do meio em um número ímpar de valores ou a média dos 2 termos do meio:
+                \[ x = \{ x_i \ | \ x_i \leq x_{i+1} \ \forall i \in \mathbb{N}^n \} \]
+                \[ Me = \begin{dcases} x_{\frac{n+1}{2}} \rightarrow \frac{n}{2} \notin \mathbb{N} \\ \overline{x_\frac{n}{2},x_{\frac{n}{2}+1}} \rightarrow \frac{n}{2} \in \mathbb{N} \end{dcases} \]
+            \item[Moda:]
+                É o valor com a maior frequência relativa dentre os possíveis valores da variável:
+                \[ Moda_x = x_i \ | \ f_{x_i} \geq f_{x_j} \ \forall j \in \mathbb{N}^n - i \]
+        \end{description}
+    %--- 11.2.5
+    \subsubsection{Medidas de Dispersão}
+        \begin{description}
+            \item[Amplitude:]
+                É a diferença entre o maior e o menor valor de uma variável,
+            \item[Variância:]
+                Indica a distância de cada valor da média dos valores possíveis da variável. É definida pela média dos quadrados das diferenças entre cada valor e a média aritmética da variável:
+                \[ \sigma^2 = \displaystyle\sum_{i=1}^{n} {(x_i - \overline{x})^2 \cdot n^{-1}}  \]
+            \item[Desvio Padrão:]
+                Definido pela raiz quadrada da variância:
+                \[ \sigma = \sqrt{\sigma^2} \]
+            \item[Desvio Médio:]
+                Definido pela média dos módulos das diferenças entre cada valor e a média aritmética da variável:
+                \[ Dm_x = \displaystyle\sum_{i=1}^{n} {|x_i - \overline{x}| \cdot n^{-1}} \]
+        \end{description}
+    %--- 11.2.6
+    \subsubsection{Medidas de Posição}
+        \begin{description}
+            \item[Quartis:] divide os valores assumidos pela variável em 4 setores iguais;
+            \item[Decis:] divide os valores assumidos pela variável em 10 setores iguais;
+            \item[Percentis:] aponta o limiar que separa os valores assumidos pela variável na porcentagem indicada, onde tal porcentagem dos valores são menores ou iguais a ele.
+        \end{description}
+    %--- 11.2.7
+    \subsubsection{Inferência Bayesiana}
+        \[ \Upsilon \pi o \mu o \nu \eta \]
